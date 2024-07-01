@@ -1,0 +1,16 @@
+{
+  "name": "ipweatherapi",
+  "version": "1.0.0",
+  "description": "A simple api which returns a message to endpoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ip",
+    "api",
+    "weather"
+  ],
+  "author": "Olajide Olanrewaju",
+  "license": "ISC"
+}
