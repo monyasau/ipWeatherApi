@@ -5,6 +5,12 @@ This is a simple Node.js API that responds with a message including the client's
 - Fetches the client's IP address and location.
 - Fetches the current temperature based on the client's location.
 - Responds with a personalized greeting message.
+## Error Handling
+      {
+        "error": "Internal Server Error, this will be fixed in a moment"
+      }
+
+If there's an error fetching location or temperature data, the server responds with a 500 status code and an error message
 
 ## Installation
 
@@ -28,12 +34,12 @@ This is a simple Node.js API that responds with a message including the client's
          
 
 ## Example:
-   ##### Request:
-            GET http://localhost/api/hello?visitor_name=lanre``    
+   ##### REQUEST:
+         GET http://localhost/api/hello?visitor_name=lanre``    
    ##### RESPONSE:
-             {
-              	"client_ip": "105.112.76.35",
-              	"location": "Manchester",
-              	"greeting": "Hello lanre, the temperature is 13.1 degrees Celcius in Manchester, England"
-             }
+         {
+            "client_ip": "105.112.76.35",
+            "location": "Manchester",
+            "greeting": "Hello lanre, the temperature is 13.1 degrees Celcius in Manchester, England"
+         }
         
