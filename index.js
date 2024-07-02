@@ -6,7 +6,8 @@ const port = 80;
 app.get("/api/hello", async (req, res) => {
   try{const visitorName = req.query.visitor_name || "Guest"; // Default to 'Guest' if visitor_name is not provided
   let ipData = await axios.get("https://ipapi.co/json/");
-  let clientIp = ipData.data.ip;
+  // let clientIp = ipData.data.ip;
+  let clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   let clientCity = ipData.data.city;
   let clientRegion = ipData.data.region;
   let weatherData = await axios.get(`http://api.weatherapi.com/v1/current.json?key=49e72d8fff664667a7485456231008&q=${clientCity}&aqi=no`)
